@@ -13,7 +13,6 @@ export default function App({ Component, pageProps }) {
       initialSession={pageProps.initialSession}
     >
       <CartProvider>
-        <Navbar />
         <Component {...pageProps} />
       </CartProvider>
     </SessionContextProvider>

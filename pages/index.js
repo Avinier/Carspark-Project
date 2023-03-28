@@ -2,11 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-import { supabase } from "@/src/config/supabase";
 import styles from "@/styles/Home.module.css";
-
-import { Auth, Typography, Button } from "@supabase/ui";
-import { useEffect, useState } from "react";
 import LoginPage from "@/src/components/LoginPage";
 
 //TODO:

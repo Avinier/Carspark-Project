@@ -12,18 +12,33 @@ const Navbar = () => {
       }}
     >
       <div>
-        <a href="/">
-          <Image src={"/assets/90s-assets/login.gif"} width={100} height={25} />
-        </a>
+        <Link href="/">
+          <Image
+            src={"/assets/90s-assets/login.gif"}
+            width={100}
+            height={25}
+            alt="Efbet"
+          />
+        </Link>
       </div>
       <div>
         <Link href="/dashboard">
-          <Image src={"/assets/90s-assets/home.gif"} width={100} height={25} />
+          <Image
+            src={"/assets/90s-assets/home.gif"}
+            width={100}
+            height={25}
+            alt="Efbet"
+          />
         </Link>
       </div>
       <div>
         <Link href="/cart">
-          <Image src={"/assets/90s-assets/cart.gif"} width={100} height={25} />
+          <Image
+            src={"/assets/90s-assets/cart.gif"}
+            width={100}
+            height={25}
+            alt="Efbet"
+          />
         </Link>
       </div>
     </nav>

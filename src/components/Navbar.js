@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import bg from "public/assets/90s-assets/texture4.JPG";
+import bg from "public/assets/90s-assets/texture4.jpg";
 const Navbar = () => {
   return (
     <nav

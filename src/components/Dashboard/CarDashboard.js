@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import CarCard from "./CarCard";
 
-import bg from "../../../public/assets/90s-assets/texture5.JPG";
+import bg from "../../../public/assets/90s-assets/texture1.jpg";
 
 const CarDashboard = (props) => {
   const DATA = props.cardata;

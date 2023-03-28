@@ -2,22 +2,39 @@ import Link from "next/link";
 import Image from "next/image";
 import CarCard from "./CarCard";
 
+import bg from "../../../public/assets/90s-assets/texture5.JPG";
+
 const CarDashboard = (props) => {
   const DATA = props.cardata;
 
   return (
-    <section className="border-[3px] w-[65%] pl-[30px] py-[30px]  mx-auto border-dashed">
-      <Image src={"/assets/90s-assets/motor.gif"} width={100} height={100} />
-      <Image src={"/assets/90s-assets/flagm.gif"} width={100} height={100} />
+    <section
+      style={{ backgroundImage: `url(${bg.src})` }}
+      className="border-[3px] w-[65%] pl-[30px] py-[30px] min-h-[200vh]  mx-auto border-dashed"
+    >
       <Image
-        src={"/assets/90s-assets/car_classic.gif"}
-        width={300}
-        height={50}
+        className="absolute left-[85%]"
+        src={"/assets/90s-assets/motor.gif"}
+        width={200}
+        height={200}
       />
       <Image
+        className="absolute top-[80%] left-[3%] "
+        src={"/assets/90s-assets/flagm.gif"}
+        width={200}
+        height={200}
+      />
+      <Image
+        className="absolute top-[180%] left-[0%] -rotate-[15deg]"
+        src={"/assets/90s-assets/car_classic.gif"}
+        width={350}
+        height={100}
+      />
+      <Image
+        className="absolute top-[120%] left-[80%] rotate-[15deg]"
         src={"/assets/90s-assets/car_rental.gif"}
-        width={300}
-        height={50}
+        width={350}
+        height={100}
       />
 
       <div className="grid grid-cols-3 gap-y-[20px] mx-auto">

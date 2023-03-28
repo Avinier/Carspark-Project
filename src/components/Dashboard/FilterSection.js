@@ -19,7 +19,7 @@ const FilterButton = (props) => {
 
   return (
     <button
-      className="bg-purple-100 px-[10px] py-[5px] rounded-lg"
+      className="bg-accent--yellow px-[10px] py-[5px] rounded-lg border-2 border-dashed "
       onClick={clickHandler}
     >
       {props.name}

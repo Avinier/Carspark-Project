@@ -7,8 +7,7 @@ const Navbar = () => {
       className="flex justify-around items-center w-[60%] mx-auto border-dashed border-accent--pink p-[20px] border-[3px] h-[50px] bg-blue-100 mb-[30px]"
       style={{
         backgroundImage: `url(${bg.src})`,
-        backgroundRepeat: "repeat",
-        objectFit: "cover",
+        objectFit: "contain",
       }}
     >
       <div>

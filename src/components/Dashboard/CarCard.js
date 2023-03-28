@@ -1,8 +1,9 @@
 import CartContext from "@/src/config/cart-context";
 import { supabase } from "@/src/config/supabase";
 import Link from "next/link";
-
+import bg from "../../../public/assets/90s-assets/texture4.jpg";
 import { useState } from "react";
+import Image from "next/image";
 
 const CarCard = (props) => {
   const [isCart, setIsCart] = useState(props.isCart);
@@ -28,22 +29,38 @@ const CarCard = (props) => {
   const productId = props.title.toLowerCase().replace(/ /g, "-");
 
   return (
-    <div className="bg-cyan-100 p-[20px] rounded-lg w-[300px] cursor-pointer">
+    <div
+      className="bg-cyan-100 p-[20px] rounded-lg w-[300px] cursor-pointer"
+      style={{
+        backgroundImage: `url(${bg.src})`,
+        backgroundSize: "300px 180px",
+        objectFit: "contain",
+      }}
+    >
       <div className="pb-[10px]">
-        <h1>{props.title}</h1>
-        <h2>{props.company}</h2>
+        <h1 className="font-black text-accent text-center text-[20px]">
+          {props.title}
+        </h1>
+        <h2 className="text-center font-bold text-accent--pink">
+          {props.company}
+        </h2>
       </div>
-      <p className="pb-[5px]">description</p>
-      <ul className="flex justify-around bg-red-100">
+      <ul className="flex justify-around border-dashed border-2 bg-accent--pink ">
         <li>{props.country}</li>
         <li>{props.engine}</li>
         <li>{props.type}</li>
       </ul>
       <button
-        className="rounded-lg bg-green-100 px-[10px] py-[5px] w-[80%] ml-[20px] mt-[10px] mb-[5px]"
+        className="rounded-lg bg-main px-[10px] py-[1px] w-[80%] ml-[20px] mt-[10px] mb-[5px] border-dashed border-2"
         onClick={addToCart}
       >
-        add
+        <Image
+          className="mx-auto"
+          src={"/assets/90s-assets/add.gif"}
+          width={50}
+          height={10}
+          alt="dfbdg"
+        />
       </button>
       {isCart && (
         <button
@@ -53,7 +70,12 @@ const CarCard = (props) => {
           remove
         </button>
       )}
-      <Link href={`/dashboard/${productId}`}>show more</Link>
+      <Link
+        href={`/dashboard/${productId}`}
+        className="text-center text-accent--pink"
+      >
+        show more
+      </Link>
     </div>
   );
 };

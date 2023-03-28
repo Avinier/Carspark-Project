@@ -5,8 +5,7 @@ import { supabase } from "@/src/config/supabase";
 const Product = ({ product }) => {
   return (
     <>
-      <h1>{product.name}</h1>
-      <CarModal />
+      <CarModal item={product} />
     </>
   );
 };
